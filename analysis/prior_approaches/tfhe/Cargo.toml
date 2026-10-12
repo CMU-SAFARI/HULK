@@ -1,0 +1,15 @@
+[package]
+name = "andk_tfhe"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# TFHE-rs 1.7.0; default features off (AVX-512 is not available on the evaluated CPU)
+tfhe = { version = "=1.7.0", default-features = false, features = ["boolean", "shortint"] }
+rayon = "1"
+rand = "0.8"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1

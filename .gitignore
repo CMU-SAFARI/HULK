@@ -1,0 +1,11 @@
+bin/
+obj/
+__pycache__/
+results_fairg/
+results_fair6s/
+results_gpu_fair/
+results_andk/
+results_newapps/
+target/
+output/
+results_bench/
